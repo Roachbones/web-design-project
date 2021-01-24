@@ -6,7 +6,20 @@ h1 {
 	text-align: center;
 	font-family: Comic Sans MS;
 }
+form {
+	text-align: center;
+	background-color: LightGoldenRodYellow;
+	border: outset;
+	max-width: 30em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1em;
+}
+form label {
+	padding: 1em;
+}
 footer {
+	margin-top: 1em;
 	text-align: center;
 	background-color: MistyRose;
 	border: outset;
