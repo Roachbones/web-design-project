@@ -16,34 +16,38 @@
 </header>
 <main>
     <form>
-        <label for="first_name">first name</label>
-        <input type="text" id="first_name">
-        <br>
-        <label for="last_name">last name</label>
-        <input type="text" id="last_name">
-        <br>
-        <label for="semester">semester/year</label>
-        <select name="semester">
-            <option value="spring">spring</option>
-            <option value="summer">summer</option>
-            <option value="fall">fall</option>    
-        </select>
-        <select name="year">
-            <option value="year">2020-2021</option>
-            <option value="year">2021-2022</option>
-            <option value="year">2022-2023</option>
-        </select>
-        <br>
-        <label for="course_prefix">course prefix</label>
-        <input type="text" id="course_prefix">
-        <br>
-        <label for="course_number">course number</label>
-        <input type="text" id="course_number">
-        <br>
-        <label for="course_section">course section</label>
-        <input type="text" id="course_section">
-        <br>
-        <input type="submit" value="Submit">
+        <div class="two_column">
+            <label for="first_name">first name</label>
+            <input type="text" id="first_name">
+            
+            <label for="last_name">last name</label>
+            <input type="text" id="last_name">
+            
+            <label for="semester">semester/year</label>
+            <div>
+                <select name="semester">
+                    <option value="spring">spring</option>
+                    <option value="summer">summer</option>
+                    <option value="fall">fall</option>    
+                </select>
+                <select name="year">
+                    <option value="year">2020-2021</option>
+                    <option value="year">2021-2022</option>
+                    <option value="year">2022-2023</option>
+                </select>
+            </div>
+            
+            <label for="course_prefix">course prefix</label>
+            <input type="text" id="course_prefix">
+            
+            <label for="course_number">course number</label>
+            <input type="text" id="course_number">
+            
+            <label for="course_section">course section</label>
+            <input type="text" id="course_section">
+            
+            <input type="submit" value="Submit">
+        </div>
     </form>
 </main>
 
