@@ -8,9 +8,6 @@ document.getElementById("last_name").onchange=name_check;
 //email validation
 document.getElementById("email").onchange=email_check;
 
-//year validation
-document.getElementById("year").onchange=year_check;
-
 //student specific fields
 document.getElementById("major").onchange=major_check;
 
