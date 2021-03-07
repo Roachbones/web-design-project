@@ -112,5 +112,5 @@ function makeInvisible(){
         document.getElementById("Tuesday_Thursday").style.visibility="hidden";
         document.getElementById("tth_label").style.visibility="hidden";
     }
-    }
+}
     
