@@ -1,29 +1,27 @@
 //this function is meant to handle the submit button alert output for every page
-function submit_output(){
-    //uses the header to determine which document is being submitted
-    var title = document.getElementsByTagName("h1");
-    var time;
+function display_form(){
+    var els=get_els();
+    return false
+}
 
-    switch (title[0].innerHTML){
-        case "Add Boring Course":
-            //the dropdown whose value needs to be fed into the alert is dependent on what day the class meets
-            if(document.getElementById("days").value=="Monday, Wednesday, Friday"){
-                time = document.getElementById("Monday_Wednesday_Friday").value;
+//this function first grabs all the values of inputs and selection boxes in the form
+function get_els(){
+    var els=Array();
 
-            }else if(document.getElementById("days").value=="Tuesday, Thursday"){
-                time = document.getElementById("Tuesday_Thursday").value;
-
-            }else{
-                time = document.getElementById("any_single_day").value;
-            }
-            alert("Course: "+document.getElementById("course_prefix").value+" "+document.getElementById("course_number").value
-            +"-"+document.getElementById("course_section").value+" "+document.getElementById("course_name").value+"\nRoom: "
-            +document.getElementById("room").value+"\nDay and Time: "+document.getElementById("days").value+" "+time+"\nCredit Hours: "
-            +document.getElementById("credit_hours").value+"\nInstructor Name: "+document.getElementById("instructor_first_name").value+" "
-            +document.getElementById("instructor_last_name").value+"\nEnrollment Cap: "+document.getElementById("enrollment_cap"));
-            break;
-        //not finished
-        default:
-            alert("what");
+    for(i=0;i<document.getElementsByTagName("input").length;i++){
+        els.push(document.getElementsByTagName("input")[i]);
     }
+
+    for(i=0;i<document.getElementsByTagName("select").length;i++){
+        els.push(document.getElementsByTagName("select")[i]);
+    }
+
+    for(i=0;i<els.length;i++){
+        if (els[i].type == "submit"){
+            els.splice(i,1);
+        }
+    }
+
+    console.log(els);
+    return els
 }
