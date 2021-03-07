@@ -1,6 +1,17 @@
 //this function is meant to handle the submit button alert output for every page
 function display_form(){
     var els=get_els();
+    var output=String();
+
+    //iterating through each element and appending it's value to an output string
+    for(i=0;i<els.length;i++){
+        output+=els[i].name.replace("_"," ")+": "+els[i].value+"\n";
+    }
+
+    //alerting user of form contents
+    alert(output);
+
+    //returning false to avoid actually submitting the form
     return false
 }
 
