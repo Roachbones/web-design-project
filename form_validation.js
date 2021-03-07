@@ -88,3 +88,29 @@ function enrollment_cap_check(){
         event.target.value="";
     }
 }
+function makeInvisible(){
+    var val=event.target.value;
+    if (val=="Monday, Wednesday, Friday"){
+        document.getElementById("Tuesday_Thursday").style.visibility="hidden";
+        document.getElementById("tth_label").style.visibility="hidden";
+        document.getElementById("any_single_day").style.visibility="hidden";
+        document.getElementById("singleday_label").style.visibility="hidden";
+        document.getElementById("Monday_Wednesday_Friday").style.visibility="visible";
+        document.getElementById("mwf_label").style.visibility="visible";
+    }else if(val=="Tuesday, Thursday"){
+        document.getElementById("Tuesday_Thursday").style.visibility="visible";
+        document.getElementById("tth_label").style.visibility="visible";
+        document.getElementById("Monday_Wednesday_Friday").style.visibility="hidden";
+        document.getElementById("mwf_label").style.visibility="hidden";
+        document.getElementById("any_single_day").style.visibility="hidden";
+        document.getElementById("singleday_label").style.visibility="hidden";
+    }else{
+        document.getElementById("any_single_day").style.visibility="visible";
+        document.getElementById("singleday_label").style.visibility="visible";
+        document.getElementById("Monday_Wednesday_Friday").style.visibility="hidden";
+        document.getElementById("mwf_label").style.visibility="hidden";
+        document.getElementById("Tuesday_Thursday").style.visibility="hidden";
+        document.getElementById("tth_label").style.visibility="hidden";
+    }
+    }
+    

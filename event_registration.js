@@ -50,3 +50,7 @@ if(document.getElementById("enrollment_cap")){
 if(document.getElementById("submit")){
 	document.getElementById("submit").onclick=display_form;
 }
+
+if(document.getElementById("days")){
+	document.getElementById("days").onchange=makeInvisible;
+}
