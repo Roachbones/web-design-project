@@ -9,50 +9,45 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="form_validation.js"></script>
 <script src="display_form.js"></script>
-
 </head>
 <body>
-<header>
-	<a href="index.html">🏚️ home</a>
-	<h1>Boring Student Enrollment</h1>
-</header>
-<main>
-	<p>hi buddy. trying to enroll somebody here? big mistake. i bet they can't handle this college. fill out this enrollment form, <b><i>if you dare................</i></b> &gt;:3<p>
+	<header>
+		<a href="index.html">🏚️ home</a>
+		<h1>Boring Student Enrollment</h1>
+	</header>
+	<main>
+		<p>hi buddy. trying to enroll somebody here? big mistake. i bet they can't handle this college. fill out this enrollment form, <b><i>if you dare................</i></b> &gt;:3<p>
+		<form>
+			<div class="two_column">
+				<label for="first_name">first name</label>
+				<input type="text" name="first_name" id="first_name">
 
-	<form>
-		<div class="two_column">
-			<label for="first_name">first name</label>
-			<input type="text" name="first_name" id="first_name">
+				<label for="last_name">last name</label>
+				<input type="text" name="last_name" id="last_name">
 
-			<label for="last_name">last name</label>
-			<input type="text" name="last_name" id="last_name">
+				<label for="year">year</label>
+				<select name="year">
+					<option value="first-year">first-year</option> <!-- freshman is too gendered -->
+					<option value="sophomore">sophomore</option>
+					<option value="junior">junior</option>
+					<option value="senior">senior</option>
+					<option value="super_senior">super senior</option>
+					<option value="complicated">it's complicated 😅</option>
+				</select>
 
-			<label for="year">year</label>
-			<select name="year">
-				<option value="first-year">first-year</option> <!-- freshman is too gendered -->
-				<option value="sophomore">sophomore</option>
-				<option value="junior">junior</option>
-				<option value="senior">senior</option>
-				<option value="super_senior">super senior</option>
-				<option value="complicated">it's complicated 😅</option>
-			</select>
+				<label for="major">major</label>
+				<input type="text" name="major" id="major">
 
-			<label for="major">major</label>
-			<input type="text" name="major" id="major">
-
-			<label for="email">email address</label>
-			<input type="text" name="email" id="email">
-		</div>
-		<input type="submit" value="Submit" id="submit">
-		
-	</form>
-</main>
-
-<footer>
-<p>this website was <a href="https://github.com/Roachbones/web-design-project">constructed</a> by the cool web design group: vivian, spence, kade, and tony</p>
-</footer>
-
-<script src="event_registration.js"></script>
-
+				<label for="email">email address</label>
+				<input type="text" name="email" id="email">
+				
+				<input type="submit" value="Submit" id="submit">
+			</div>
+		</form>
+	</main>
+	<footer>
+		<p>this website was <a href="https://github.com/Roachbones/web-design-project">constructed</a> by the cool web design group: vivian, spence, kade, and tony</p>
+	</footer>
+	<script src="event_registration.js"></script>
 </body>
 </html>
