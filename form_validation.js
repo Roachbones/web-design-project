@@ -11,7 +11,7 @@ function name_check(){
 function email_check(){
     var val=event.target.value;
     
-    if(val.search(/^[A-Z]{3}\d{3}@marietta.edu$/)==-1){
+    if(val.search(/^[A-Za-z]{3}\d{3}@marietta.edu$/)==-1){
         alert("Please enter a valid email address\nEx:abc123@marietta.edu");
         event.target.value="";
     }
