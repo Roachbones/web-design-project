@@ -5,7 +5,7 @@ function display_form(){
 
     //iterating through each element and appending it's value to an output string
     for(i=0;i<els.length;i++){
-        output+=els[i].name.replace("_"," ")+": "+els[i].value+"\n";
+        output+=els[i].name.replace(/_/g," ")+": "+els[i].value+"\n";
     }
 
     //alerting user of form contents
@@ -19,16 +19,22 @@ function display_form(){
 function get_els(){
     var els=Array();
 
+    //getting all input textboxes
     for(i=0;i<document.getElementsByTagName("input").length;i++){
         els.push(document.getElementsByTagName("input")[i]);
     }
 
+    //getting all select dropdown
     for(i=0;i<document.getElementsByTagName("select").length;i++){
         els.push(document.getElementsByTagName("select")[i]);
     }
 
+    //removing submit buttons/hidden fields from array
     for(i=0;i<els.length;i++){
         if (els[i].type == "submit"){
+            els.splice(i,1);
+        }
+        if(els[i].style.visibility == "hidden"){
             els.splice(i,1);
         }
     }
