@@ -21,3 +21,6 @@ document.getElementById("course_section").onchange=course_section_check;
 document.getElementById("room").onchange=room_check;
 document.getElementById("credit_hours").onchange=credit_hours_check;
 document.getElementById("enrollment_cap").onchange=enrollment_cap_check;
+
+//submit button onclick event
+document.getElementById("submit").onclick=submit_output;
