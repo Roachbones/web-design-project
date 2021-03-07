@@ -2,8 +2,8 @@
 function name_check(){
     var val=event.target.value;
 
-    if(val.search(/[a-z ,.'-]+/)==-1){
-        alert("must include a name");
+    if(val.search(/^[A-Z-a-z]['. \-a-z]*/)==-1){
+        alert("Must include a name");
         event.target.value="";
     }
 }
@@ -20,8 +20,8 @@ function email_check(){
 function major_check(){
     var val=event.target.value;
     
-    if(val.search(/^([A-Za-z] ?)+$/)==-1){
-        alert("");
+    if(val!="" && val.search(/^([A-Za-z] ?)+$/)==-1){
+        alert("Major must only contain letters and spaces");
         event.target.value="";
     }
 }
@@ -29,8 +29,8 @@ function major_check(){
 function department_check(){
     var val=event.target.value;
     
-    if(val.search(/^([A-Za-z] ?)+$/)==-1){
-        alert("");
+    if(val!="" && val.search(/^([A-Za-z] ?)+$/)==-1){
+        alert("Department name must only contain letters and spaces");
         event.target.value="";
     }
 }
@@ -39,7 +39,7 @@ function course_prefix_check(){
     var val=event.target.value;
     
     if(val.search(/^[A-Z]{3,4}$/)==-1){
-        alert("");
+        alert("Course prefix must be either 3 or 4 capital letters");
         event.target.value="";
     }
 }
@@ -47,8 +47,8 @@ function course_prefix_check(){
 function course_number_check(){
     var val=event.target.value;
     
-    if(val.search(/^[0-3]\d{2}$/)==-1){
-        alert("");
+    if(val.search(/^[0-4]\d{2}$/)==-1){
+        alert("Course Number must be 3 digits and less than 500");
         event.target.value="";
     }
 }
@@ -56,8 +56,8 @@ function course_number_check(){
 function course_section_check(){
     var val=event.target.value;
     
-    if(val.search(/^\d{2}$/i)==-1){
-        alert("");
+    if(val.search(/^\d{2}$/)==-1){
+        alert("Section must be exactly 2 digits");
         event.target.value="";
     }
 }
@@ -65,8 +65,8 @@ function course_section_check(){
 function room_check(){
     var val=event.target.value;
 
-    if(val.search(/^$/i)==-1){
-        alert("");
+    if(val != "" && val.search(/^[A-Za-z]+ \d{2,3}[A-Z-a-z]?/)==-1){
+        alert("Room must be in the format (<Building Name> <Room Number>)");
         event.target.value="";
     }
 }
@@ -74,8 +74,8 @@ function room_check(){
 function credit_hours_check(){
     var val=event.target.value;
 
-    if(val.search(/^[0-4]$/i)==-1){
-        alert("");
+    if(val.search(/^[0-4]$/)==-1){
+        alert("Credit hours must be a number between 0 and 4");
         event.target.value="";
     }
 }
@@ -83,8 +83,8 @@ function credit_hours_check(){
 function enrollment_cap_check(){
     var val=event.target.value;
     
-    if(val.search(/^[1-9][0-9]$/i)==-1){
-        alert("");
+    if(val.search(/^[0-9]{2}$/)==-1){
+        alert("Enrollment cap must be a number with two digits");
         event.target.value="";
     }
 }
