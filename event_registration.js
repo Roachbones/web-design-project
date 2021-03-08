@@ -51,5 +51,5 @@ if(document.getElementById("days")){
 
 //submit button onclick event
 if(document.getElementById("submit")){
-	document.getElementById("submit").onclick=display_form;
+	document.getElementById("submit").onclick=submitFunction;
 }
