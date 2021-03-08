@@ -1,3 +1,5 @@
+//this function returns an array of all non-hidden, non-submit button input/select elements for a given document
+//it is used to generate the output for the display_form() function
 function get_els(){
     var els=Array();
 
@@ -34,7 +36,9 @@ function no_hiddens(el){
     }
 }
 
-//this function is meant to handle the submit button alert output for every page
+//this function calls get_els() to get a list of non-hidden, non-submit button input/select elements for a given page
+//it then iterates through that array and makes a string that contains all the form's values
+//this string is then displayed in an alert box
 function display_form(){
     var els=get_els();
     var output=String();
