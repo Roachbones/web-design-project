@@ -22,8 +22,8 @@ form {
 	margin-right: auto;
 	padding: 1em;
 }
-form label {
-	
+.hidden {
+	display:none;
 }
 .two_column {
 	display: grid;
