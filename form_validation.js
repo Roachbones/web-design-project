@@ -2,8 +2,8 @@
 function name_check(){
     var val=event.target.value;
 
-    if(val.search(/^[A-Z-a-z]['. \-a-z]*/)==-1){
-        alert("Must include a name");
+    if(val.search(/^([A-Za-z\-'] ?)+$/)==-1){
+        alert("Must include a valid name\nEx: Matt Willamson, Oney O'Brien, John Doe");
         event.target.value="";
     }
 }
@@ -39,7 +39,7 @@ function course_prefix_check(){
     var val=event.target.value;
     
     if(val.search(/^[A-Z]{3,4}$/)==-1){
-        alert("Course prefix must be either 3 or 4 capital letters");
+        alert("Course prefix must be either 3 or 4 capital letters\nEx: MATH, ECON, ART, FIN");
         event.target.value="";
     }
 }
@@ -83,8 +83,8 @@ function credit_hours_check(){
 function enrollment_cap_check(){
     var val=event.target.value;
     
-    if(val.search(/^[0-9]{2}$/)==-1){
-        alert("Enrollment cap must be a number with two digits");
+    if(val.search(/^[0-9][1-9]$/)==-1){
+        alert("Enrollment cap must be a number between 01-99");
         event.target.value="";
     }
 }
