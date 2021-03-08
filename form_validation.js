@@ -65,8 +65,8 @@ function course_section_check(){
 function room_check(){
     var val=event.target.value;
 
-    if(val != "" && val.search(/^[A-Za-z]+ \d{2,3}[A-Z-a-z]?/)==-1){
-        alert("Room must be in the format (<Building Name> <Room Number>)");
+    if(val != "" && val.search(/^[A-Za-z]+ \d{2,3}[A-Z-a-z]?$/)==-1){
+        alert("Room must be of a valid format\nEx:Selby 239, Thomas 25F, Library 21");
         event.target.value="";
     }
 }
