@@ -9,6 +9,12 @@ if(document.getElementById("first_name")){
 if(document.getElementById("last_name")){
 	document.getElementById("last_name").onchange=name_check;
 }
+if(document.getElementById("instructor_first_name")){
+	document.getElementById("instructor_first_name").onchange=name_check;
+}
+if(document.getElementById("instructor_last_name")){
+	document.getElementById("instructor_last_name").onchange=name_check;
+}
 
 //email validation
 if(document.getElementById("email")){
