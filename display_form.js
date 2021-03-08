@@ -11,9 +11,9 @@ function get_els(){
         els.push(document.getElementsByTagName("select")[i]);
     }
 
-    //removing submit buttons from array
+    //removing submit buttons or empty optional fields from array
     for(i=0;i<els.length;i++){
-        if (els[i].type=="submit"){
+        if (els[i].type=="submit" || els[i].value==""){
             els.splice(i,1);
         }
     }
