@@ -25,7 +25,7 @@ function get_els(){
     console.log(els);
     return els
 }
-
+//finds required elements and ensures they are filled out
 function checkRequired(){
     var output = ""
     ray = get_els();
