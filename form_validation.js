@@ -91,26 +91,26 @@ function enrollment_cap_check(){
 function makeInvisible(){
     var val=event.target.value;
     if (val=="Monday, Wednesday, Friday"){
-        document.getElementById("Tuesday_Thursday").style. display="none";
-        document.getElementById("tth_label").style. display="none";
-        document.getElementById("any_single_day").style. display="none";
-        document.getElementById("singleday_label").style. display="none";
-        document.getElementById("Monday_Wednesday_Friday").style. display="inline";
-        document.getElementById("mwf_label").style. display="inline";
+        document.getElementById("Tuesday_Thursday").style.display="none";
+        document.getElementById("tth_label").style.display="none";
+        document.getElementById("any_single_day").style.display="none";
+        document.getElementById("singleday_label").style.display="none";
+        document.getElementById("Monday_Wednesday_Friday").style.display="inline";
+        document.getElementById("mwf_label").style.display="inline";
     }else if(val=="Tuesday, Thursday"){
-        document.getElementById("Tuesday_Thursday").style. display="inline";
-        document.getElementById("tth_label").style. display="inline";
-        document.getElementById("Monday_Wednesday_Friday").style. display="none";
-        document.getElementById("mwf_label").style. display="none";
-        document.getElementById("any_single_day").style. display="none";
-        document.getElementById("singleday_label").style. display="none";
+        document.getElementById("Tuesday_Thursday").style.display="inline";
+        document.getElementById("tth_label").style.display="inline";
+        document.getElementById("Monday_Wednesday_Friday").style.display="none";
+        document.getElementById("mwf_label").style.display="none";
+        document.getElementById("any_single_day").style.display="none";
+        document.getElementById("singleday_label").style.display="none";
     }else if(val=="Monday" || val=="Tuesday" || val=="Wednesday" || val=="Thursday"){
-        document.getElementById("any_single_day").style. display="inline";
-        document.getElementById("singleday_label").style. display="inline";
-        document.getElementById("Monday_Wednesday_Friday").style. display="none";
-        document.getElementById("mwf_label").style. display="none";
-        document.getElementById("Tuesday_Thursday").style. display="none";
-        document.getElementById("tth_label").style. display="none";
+        document.getElementById("any_single_day").style.display="inline";
+        document.getElementById("singleday_label").style.display="inline";
+        document.getElementById("Monday_Wednesday_Friday").style.display="none";
+        document.getElementById("mwf_label").style.display="none";
+        document.getElementById("Tuesday_Thursday").style.display="none";
+        document.getElementById("tth_label").style.display="none";
     }
 }
     
