@@ -46,7 +46,7 @@ if(document.getElementById("enrollment_cap")){
 	document.getElementById("enrollment_cap").onchange=enrollment_cap_check;
 }
 if(document.getElementById("days")){
-	document.getElementById("days").onchange=makeInvisible;
+	document.getElementById("days").onchange=handle_visibility;
 }
 
 //form submission event

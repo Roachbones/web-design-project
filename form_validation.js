@@ -110,22 +110,23 @@ currently it is only used to hide select boxes on the add course page, so that o
 */
 
 function handle_visibility(){
-    var val=event.target.value;
-    if (val=="Monday, Wednesday, Friday"){
+    var day=event.target.value;
+    
+    if (day=="Monday, Wednesday, Friday"){
         document.getElementById("Tuesday_Thursday").className="hidden";
         document.getElementById("tth_label").className="hidden";
         document.getElementById("any_single_day").className="hidden";
         document.getElementById("singleday_label").className="hidden";
         document.getElementById("Monday_Wednesday_Friday").className="";
         document.getElementById("mwf_label").className="";
-    }else if(val=="Tuesday, Thursday"){
+    }else if(day=="Tuesday, Thursday"){
         document.getElementById("Tuesday_Thursday").className="";
         document.getElementById("tth_label").className="";
         document.getElementById("Monday_Wednesday_Friday").className="hidden";
         document.getElementById("mwf_label").className="hidden";
         document.getElementById("any_single_day").className="hidden";
         document.getElementById("singleday_label").className="hidden";
-    }else if(val=="Monday" || val=="Tuesday" || val=="Wednesday" || val=="Thursday"){
+    }else if(day=="Monday" || day=="Tuesday" || day=="Wednesday" || day=="Thursday"){
         document.getElementById("any_single_day").className="";
         document.getElementById("singleday_label").className="";
         document.getElementById("Monday_Wednesday_Friday").className="hidden";
