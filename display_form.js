@@ -1,4 +1,3 @@
-
 function get_els(){
     var els=Array();
 
@@ -12,18 +11,27 @@ function get_els(){
         els.push(document.getElementsByTagName("select")[i]);
     }
 
-    //removing submit buttons/hidden fields from array
+    //removing submit buttons from array
     for(i=0;i<els.length;i++){
-        if (els[i].type == "submit"){
-            els.splice(i,1);
-        }
-        if(els[i].style.visibility == "hidden"){
+        if (els[i].type=="submit"){
             els.splice(i,1);
         }
     }
 
+    //removing hidden elements from array
+    els=els.filter(no_hiddens)
+    
     console.log(els);
     return els
+}
+
+function no_hiddens(el){
+    if(el.className=="hidden"){
+        return false
+    }
+    else{
+        return true
+    }
 }
 //finds required elements and ensures they are filled out
 function checkRequired(){
@@ -42,7 +50,7 @@ function checkRequired(){
           alert(output);
           return false;
       }
-    }
+}
 
 //this function is meant to handle the submit button alert output for every page
 function display_form(){
