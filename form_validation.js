@@ -1,13 +1,19 @@
+/*
+field validation functions
+these functions check the element that triggered to be of a valid format, if not, it clears the field and alerts the user
+*/
 
+//checks for a valid name, one of 1 or more words consisting of letters, and apostrophes separated by spaces
 function name_check(){
     var val=event.target.value;
 
-    if(val.search(/^([A-Za-z\-'] ?)+$/)==-1){
+    if(val.search(/^([A-Za-z'] ?)+$/)==-1){
         alert("Must include a valid name\nEx: Matt Willamson, Oney O'Brien, John Doe");
         event.target.value="";
     }
 }
 
+//checks for a valid email, one that is 3 letters, 3 numbers, @marietta.edu
 function email_check(){
     var val=event.target.value;
     
@@ -17,6 +23,7 @@ function email_check(){
     }
 }
 
+//checks for valid major, one that is one or more words consisting of letters that are seperated by spaces
 function major_check(){
     var val=event.target.value;
     
@@ -26,6 +33,7 @@ function major_check(){
     }
 }
 
+//checks for valid department, one that is one or more words consisting of letters that are seperated by spaces
 function department_check(){
     var val=event.target.value;
     
@@ -35,6 +43,7 @@ function department_check(){
     }
 }
 
+//checks for a valid course prefix, one that is 3 or 4 capital letters
 function course_prefix_check(){
     var val=event.target.value;
     
@@ -44,6 +53,7 @@ function course_prefix_check(){
     }
 }
 
+//checks for a valid course number, any three digit number <= 499
 function course_number_check(){
     var val=event.target.value;
     
@@ -53,6 +63,7 @@ function course_number_check(){
     }
 }
 
+//checks for a valid course section, which is any 2 digit number between 00 and 99
 function course_section_check(){
     var val=event.target.value;
     
@@ -62,6 +73,7 @@ function course_section_check(){
     }
 }
 
+//checks for a valid room
 function room_check(){
     var val=event.target.value;
 
@@ -71,6 +83,7 @@ function room_check(){
     }
 }
 
+//must be a valid number of credit hours, 0-4
 function credit_hours_check(){
     var val=event.target.value;
 
@@ -80,6 +93,7 @@ function credit_hours_check(){
     }
 }
 
+//must be a valid number of students, between 01 and 99
 function enrollment_cap_check(){
     var val=event.target.value;
     
@@ -88,7 +102,14 @@ function enrollment_cap_check(){
         event.target.value="";
     }
 }
-function makeInvisible(){
+
+/*
+element visibility handler
+this function uses css classes to hide or unhide elements based on conditions
+currently it is only used to hide select boxes on the add course page, so that ony appropriate times are displayed for currently selected day
+*/
+
+function handle_visibility(){
     var val=event.target.value;
     if (val=="Monday, Wednesday, Friday"){
         document.getElementById("Tuesday_Thursday").className="hidden";
