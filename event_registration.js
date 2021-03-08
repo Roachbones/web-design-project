@@ -27,6 +27,10 @@ if (document.getElementById("department")){
 
 
 //course specific fields
+if(document.getElementById("course_year")){
+	document.getElementById("course_year").onchange=course_year_check;
+}
+
 if(document.getElementById("course_prefix")){
 	document.getElementById("course_prefix").onchange=course_prefix_check;
 }

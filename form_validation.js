@@ -27,7 +27,7 @@ function email_check(){
 function major_check(){
     var val=event.target.value;
     
-    if(val!="" && val.search(/^([A-Za-z] ?)+$/)==-1){
+    if(val.search(/^([A-Za-z] ?)+$/)==-1){
         alert("Major must only contain letters and spaces");
         event.target.value="";
     }
@@ -37,13 +37,23 @@ function major_check(){
 function department_check(){
     var val=event.target.value;
     
-    if(val!="" && val.search(/^([A-Za-z] ?)+$/)==-1){
+    if(val.search(/^([A-Za-z] ?)+$/)==-1){
         alert("Department name must only contain letters and spaces");
         event.target.value="";
     }
 }
 
 //checks for a valid course prefix, one that is 3 or 4 capital letters
+function course_year_check(){
+    var val=event.target.value;
+
+    if(val.search(/^2[0-9][2-9][0-9]$/)==-1){
+        alert("Course year must be a four digit year after 2020");
+        event.target.value="";
+    }
+}
+
+
 function course_prefix_check(){
     var val=event.target.value;
     
