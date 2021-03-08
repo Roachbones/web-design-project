@@ -27,6 +27,8 @@ function get_els(){
     return els
 }
 
+//this function acts as a filter for the element array in get_els()
+//this ensures that no hidden elements are in the final array
 function no_hiddens(el){
     if(el.className=="hidden"){
         return false
