@@ -1,4 +1,3 @@
-
 function get_els(){
     var els=Array();
 
@@ -12,37 +11,28 @@ function get_els(){
         els.push(document.getElementsByTagName("select")[i]);
     }
 
-    //removing submit buttons/hidden fields from array
+    //removing submit buttons from array
     for(i=0;i<els.length;i++){
-        if (els[i].type == "submit"){
-            els.splice(i,1);
-        }
-        if(els[i].style.visibility == "hidden"){
+        if (els[i].type=="submit"){
             els.splice(i,1);
         }
     }
 
+    //removing hidden elements from array
+    els=els.filter(no_hiddens)
+    
     console.log(els);
     return els
 }
-//finds required elements and ensures they are filled out
-function checkRequired(){
-    var output = ""
-    var ray = get_els();
-    for(var i=0; i<ray.length; i++){
-        if (ray[i].prop("required")){
-            if(ray[i].value==""){
-                output+="required field "+ray[i].name+" is not filled out\n";
-            }
-        }
+
+function no_hiddens(el){
+    if(el.className=="hidden"){
+        return false
     }
-      if (output==""){
-        return true;
-      }else{
-          alert(output);
-          return false;
-      }
+    else{
+        return true
     }
+}
 
 //this function is meant to handle the submit button alert output for every page
 function display_form(){
@@ -59,11 +49,4 @@ function display_form(){
 
     //returning false to avoid actually submitting the form
     return false;
-}
-
-//this function first grabs all the values of inputs and selection boxes in the form
-function submitFunction(){
-    if(checkRequired()){
-        display_form();
-    }
 }

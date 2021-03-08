@@ -49,10 +49,7 @@ if(document.getElementById("days")){
 	document.getElementById("days").onchange=makeInvisible;
 }
 
-//submit button onclick event
-/*if(document.getElementById("submit")){
-	document.getElementById("submit").onclick=display_form;
+//form submission event
+if(document.getElementsByTagName("form")){
+	var form=document.getElementsByTagName("form")[0].onsubmit=display_form;
 }
-if (document.getElementsByTagName("form")){
-	document.getElementsByTagName[0].onsubmit=display_form;
-}*/
