@@ -50,6 +50,9 @@ if(document.getElementById("days")){
 }
 
 //submit button onclick event
-if(document.getElementById("submit")){
-	document.getElementById("submit").onclick=submitFunction;
+/*if(document.getElementById("submit")){
+	document.getElementById("submit").onclick=display_form;
 }
+if (document.getElementsByTagName("form")){
+	document.getElementsByTagName[0].onsubmit=display_form;
+}*/
