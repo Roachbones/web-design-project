@@ -34,7 +34,7 @@ function get_els(){
         if (els[i].type == "submit"){
             els.splice(i,1);
         }
-        if(els[i].style.visibility == "hidden"){
+        if(els[i].style.display == "none"){
             els.splice(i,1);
         }
     }
