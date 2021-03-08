@@ -45,12 +45,11 @@ if(document.getElementById("credit_hours")){
 if(document.getElementById("enrollment_cap")){
 	document.getElementById("enrollment_cap").onchange=enrollment_cap_check;
 }
+if(document.getElementById("days")){
+	document.getElementById("days").onchange=makeInvisible;
+}
 
 //submit button onclick event
 if(document.getElementById("submit")){
 	document.getElementById("submit").onclick=display_form;
-}
-
-if(document.getElementById("days")){
-	document.getElementById("days").onchange=makeInvisible;
 }

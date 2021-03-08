@@ -104,7 +104,7 @@ function makeInvisible(){
         document.getElementById("mwf_label").style.visibility="hidden";
         document.getElementById("any_single_day").style.visibility="hidden";
         document.getElementById("singleday_label").style.visibility="hidden";
-    }else{
+    }else if(val=="Monday" || val=="Tuesday" || val=="Wednesday" || val=="Thursday"){
         document.getElementById("any_single_day").style.visibility="visible";
         document.getElementById("singleday_label").style.visibility="visible";
         document.getElementById("Monday_Wednesday_Friday").style.visibility="hidden";
