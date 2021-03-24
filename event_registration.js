@@ -4,10 +4,10 @@
 //common fields
 //name validation
 if(document.getElementById("first_name")){
-	document.getElementById("first_name").onchange=name_check;
+	document.getElementById("first_name").onchange=first_name_check;
 }
 if(document.getElementById("last_name")){
-	document.getElementById("last_name").onchange=name_check;
+	document.getElementById("last_name").onchange=last_name_check;
 }
 if(document.getElementById("instructor_first_name")){
 	document.getElementById("instructor_first_name").onchange=name_check;
