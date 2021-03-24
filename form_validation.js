@@ -47,7 +47,7 @@ function department_check(){
 function course_year_check(){
     var val=event.target.value;
 
-    if(val.search(/^2[0-9][2-9][0-9]$/)==-1){
+    if(val.search(/^\d{4}$/)==-1 || val <= 2020){
         alert("Course year must be a four digit year after 2020");
         event.target.value="";
     }
