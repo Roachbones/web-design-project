@@ -15,11 +15,12 @@
 </header>
 <main>
 	<form>
-        <div class="two-column">
-            <label for="login">login</label>
-			<input type="text" name="login" id="login" required>
+        <p style="text-align: center;">Please log in to use the system.</p>
+        <div class="three-column">
+            <label for="login">username</label>
+            <input type="text" name="login" id="login" required>
         </div>
-        <input type="submit" value="submit!" id="submit">
+        <input type="submit" value="login" id="submit">
     </form>
 </main>
 

@@ -33,7 +33,7 @@ form {
 }
 #submit{
 	display: block;
-	margin: 0 auto;
+	margin: 1em auto;
 }
 p.memo{
 	text-align: center;
