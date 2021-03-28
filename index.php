@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- mobile compatibility -->
 <title>Boring Course Registration System</title>
 <link rel="stylesheet" type="text/css" href="style.css">
+<?php session_start(); ?>
 
 </head>
 <body>
@@ -14,8 +15,8 @@
 	<h1>Boring Course Registration System</h1>
 </header>
 <main>
-	<form>
-        <p style="text-align: center;">Please log in to use the system.</p>
+	<form action="login.php" method="post">
+    <?php if($_SESSION["login"] == "INVALID"){ echo "<p style=\"color:red;text-align:center;\">INVALID LOGIN: Please try again.</p>";} else{ echo "<p style=\"text-align: center;\">Please log in to use the system.</p>"; } ?>
         <div class="three-column">
             <label for="login">username</label>
             <input type="text" name="login" id="login" required>
