@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <a href="index.html">🏚️ home</a>
+        <a href="home.html">🏚️ home</a>
         <h1>Add a Boring Course</h1>
     </header>
     <main>

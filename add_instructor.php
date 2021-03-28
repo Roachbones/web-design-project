@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="author" content="the cool web design group">
-<meta name="description" content="Student enrollment form for our boring course registration project for Dr. Williamson's Web Design & Programming class, spring 2021.">
+<meta name="description" content="Instructor adding form for our boring course registration project for Dr. Williamson's Web Design & Programming class, spring 2021.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- mobile compatibility -->
-<title>Boring Student Enrollment</title>
+<title>Add a Boring Instructor</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="form_validation.js"></script>
 <script src="display_form.js"></script>
 </head>
 <body>
 	<header>
-		<a href="index.html">🏚️ home</a>
-		<h1>Boring Student Enrollment</h1>
+		<a href="home.html">🏚️ home</a>
+		<h1>Add Boring Instructor</h1>
 	</header>
 	<main>
-		<p>hi buddy. trying to enroll somebody here? big mistake. i bet they can't handle this college. fill out this enrollment form, <b><i>if you dare................</i></b> &gt;:3<p>
+		<p>hi buddy. here's where you add an instructor. fill out this info about the instructor and click submit to add them.<p>
 		<form>
 			<div class="two_column">
 				<label for="first_name">first name *</label>
@@ -25,18 +25,16 @@
 				<label for="last_name">last name *</label>
 				<input type="text" name="last_name" id="last_name" required>
 
-				<label for="year">year</label>
-				<select name="year">
-					<option value="first-year">first-year</option> <!-- freshman is too gendered -->
-					<option value="sophomore">sophomore</option>
-					<option value="junior">junior</option>
-					<option value="senior">senior</option>
-					<option value="super_senior">super senior</option>
-					<option value="complicated">it's complicated 😅</option>
-				</select>
+				<label for="department">department</label>
+				<input type="text" name="department" id="department">
 
-				<label for="major">major</label>
-				<input type="text" name="major" id="major">
+				<label for="rank">rank</label>
+				<select name="rank" id="rank">
+					<option value="instructor">mere instructor, and nothing more</option> <!-- freshman is too gendered -->
+					<option value="assistant">assistant professor</option>
+					<option value="associate">associate professor</option>
+					<option value="professor">just a plain old professor</option>
+				</select>
 
 				<label for="email">email address *</label>
 				<input type="text" name="email" id="email" required>
@@ -49,5 +47,5 @@
 		<p>this website was <a href="https://github.com/Roachbones/web-design-project">constructed</a> by the cool web design group: vivian, spence, kade, and tony</p>
 	</footer>
 	<script src="event_registration.js"></script>
-</body>
+	</body>
 </html>
