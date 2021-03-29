@@ -4,6 +4,10 @@ body {
 	font-family: sans;
 	background-color: Thistle;
 }
+nav{
+	background-color: plum;
+	padding:.25em;
+}
 h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	font-family: 'Comic Sans MS', 'Comic Sans', 'Comic Neue', cursive;

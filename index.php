@@ -12,17 +12,18 @@
 </head>
 <body>
 <header>
+	<?php include("header.php"); ?>
 	<h1>Boring Course Registration System</h1>
 </header>
 <main>
-	<form action="login.php" method="post">
-    <?php if($_SESSION["login"] == "INVALID"){ echo "<p style=\"color:red;text-align:center;\">INVALID LOGIN: Please try again.</p>";} else{ echo "<p style=\"text-align: center;\">Please log in to use the system.</p>"; } ?>
-        <div class="three-column">
-            <label for="login">username</label>
-            <input type="text" name="login" id="login" required>
-        </div>
-        <input type="submit" value="login" id="submit">
-    </form>
+	<p>hi buddy. here are the links :3<p>
+	<ul>
+		<li><a href="enroll_student.php">enroll student</a></li>
+		<li><a href="add_instructor.php">add instructor</a></li>
+		<li><a href="add_course.php">add course</a></li>
+		<li><a href="register_for_course.php">register for course</a></li>
+		<li><a href="drop_a_course.php">drop a course</a></li>
+	</ul>
 </main>
 
 <footer>
