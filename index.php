@@ -18,7 +18,7 @@
 </header>
 <main>
 	<section>
-	<p>hi buddy. here are the links :3<p>
+	<p>hi <?php echo $_SESSION["login"]; ?>. here are the links :3<p>
 	<ul>
 		<li><a href="register_for_course.php">register for course</a></li>
 		<li><a href="drop_a_course.php">drop a course</a></li>
