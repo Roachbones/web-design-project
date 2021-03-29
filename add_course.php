@@ -20,7 +20,7 @@
     </header>
     
     <main>
-    <?php if($_SESSION["login"] == "admin") { ?>
+    <?php if($_SESSION["login"] == "admin" or $_SESSION["login"] == "instructor") { ?>
             <form action = "add_course_display.php" method="post">
                 <div class="two_column">
                     <label for="semester">semester</label>
