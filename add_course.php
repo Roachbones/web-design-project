@@ -18,7 +18,7 @@
         <h1>Add a Boring Course</h1>
     </header>
     <main>
-        <form>
+        <form action = "add_course_display.php" method="post">
             <div class="two_column">
                 <label for="semester">semester</label>
                 <select name="semester" id="semester">
