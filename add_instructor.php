@@ -19,6 +19,7 @@
 		<h1>Add Boring Instructor</h1>
 	</header>
 	<main>
+        <?php if($_SESSION["login"] == "admin" or $_SESSION["login"] == "student") { ?>
 		<form>
 			<div class="two_column">
 				<label for="first_name">first name *</label>
@@ -44,6 +45,12 @@
 			<p class="memo">* indicates a required field</p>
 			<input type="submit" value="submit!" id="submit">
 		</form>
+		
+		<?php 
+        } else { 
+            http_response_code(403);
+            include("begone.php");
+        } ?>
 	</main>
 	<?php include("footer.php"); ?>
 	<script src="event_registration.js"></script>
