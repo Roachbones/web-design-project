@@ -10,9 +10,11 @@
 <script src="form_validation.js"></script>
 <script src="display_form.js"></script>
 </head>
+<?php session_start(); ?>
+
 <body>
     <header>
-        <a href="home.html">🏚️ home</a>
+        <?php include("header.php"); ?>
         <h1>Register for a Boring Course</h1>
     </header>
     <main>

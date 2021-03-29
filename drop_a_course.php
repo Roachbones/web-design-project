@@ -9,11 +9,12 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="form_validation.js"></script>
 <script src="display_form.js"></script>
+<?php session_start(); ?>
 
 </head>
 <body>
     <header>
-        <a href="home.html">🏚️ home</a>
+        <?php include("header.php"); ?>
         <h1>Drop a Boring Course</h1>
     </header>
     <main>
