@@ -11,6 +11,7 @@
 <script src="display_form.js"></script>
 </head>
 <?php session_start(); ?>
+<?php include("login_check.php"); ?>
 
 <body>
     <header>
