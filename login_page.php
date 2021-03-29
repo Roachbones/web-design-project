@@ -17,7 +17,7 @@
 <main>
 	<form action="login.php" method="post">
         <p style="text-align:center">
-            <?php if($_SESSION["login"] == "BAD LOGIN"){ echo "Invalid login, please try again.";} elseif($_SESSION["login"]=="SESSION TIMEOUT"){echo "Session timed out, please log in again."; } else{ echo "Please log in to use the system."; } ?>
+            <?php if($_SESSION["error"] == "BAD LOGIN"){ echo "Invalid login, please try again.";} elseif($_SESSION["error"]=="SESSION TIMEOUT"){echo "Session timed out, please log in again."; } else{ echo "Please log in to use the system."; } ?>
         </p>
         <div class="two_column">
             <label for="login">username</label>

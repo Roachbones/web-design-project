@@ -8,8 +8,8 @@
 
     $_SESSION["last_seen"]=$current_time;
 
-    if($time_inactive > 60){
-        $_SESSION["login"]="SESSION TIMEOUT";
+    if($time_inactive > 10){
+        $_SESSION["error"]="SESSION TIMEOUT";
         header("location:login_page.php");
     }
 

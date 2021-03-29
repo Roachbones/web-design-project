@@ -1,5 +1,5 @@
 <?php
-    // checks the current session to see if a valiid users is logging in
+    // checks the current session to see if a valid user is logging in
 
     // if the login name is set through form submission, storing it in $username
     if (isset($_POST["login"])){
@@ -17,7 +17,7 @@
     // if the username isn't valid, setting login to BAD LOGIN and redirecting back to login page
     else{
         session_start();
-        $_SESSION["login"]="BAD LOGIN";
+        $_SESSION["error"]="BAD LOGIN";
         header("location:login_page.php");
     }
 ?>
