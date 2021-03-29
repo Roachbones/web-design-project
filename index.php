@@ -19,11 +19,16 @@
 <main>
 	<p>hi buddy. here are the links :3<p>
 	<ul>
-		<li><a href="enroll_student.php">enroll student</a></li>
-		<li><a href="add_instructor.php">add instructor</a></li>
-		<li><a href="add_course.php">add course</a></li>
 		<li><a href="register_for_course.php">register for course</a></li>
 		<li><a href="drop_a_course.php">drop a course</a></li>
+		<?php
+        $username=$_SESSION["login"];
+        if($username == "admin"){ ?>
+            <!-- admin-only stuff -->
+		    <li><a href="enroll_student.php">enroll student</a></li>
+		    <li><a href="add_instructor.php">add instructor</a></li>
+		    <li><a href="add_course.php">add course</a></li>
+        <?php } ?>
 	</ul>
 </main>
 
