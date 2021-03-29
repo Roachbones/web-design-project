@@ -15,7 +15,7 @@
 	<h1>Boring Course Registration System</h1>
 </header>
 <main>
-	<form action="login_check.php" method="post">
+	<form action="login.php" method="post">
     <?php if($_SESSION["login"] == "BAD LOGIN"){ echo "<p style=\"color:red;text-align:center;\">INVALID LOGIN: Please try again.</p>";} elseif($_SESSION["login"]=="SESSION TIMEOUT"){echo "<p>Session timed out, please login again.</p>"; }else{ echo "<p style=\"text-align: center;\">Please log in to use the system.</p>"; } ?>
         <div class="three-column">
             <label for="login">username</label>
