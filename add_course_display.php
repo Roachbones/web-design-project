@@ -47,41 +47,42 @@ if ($courseName = "")
 if ($room = "")
     $name = "N/A";
 ?>
+<h3>The following course will be added</h3>
 <table>
     <tr>
         <td>Course Year</td><td> <?php print "$courseYear";?> </td>
-    </tr><br>
+    </tr>
 
     <tr>
         <td>Course</td><td> <?php print "$course";?> </td>
-    </tr><br>
+    </tr>
 
     <tr>
         <td>Course Name</td><td> <?php print "$courseName";?> </td>
-    </tr><br>
+    </tr>
 
     <tr>
         <td>Room</td> <td> <?php print "$room"; ?> </td>
-    </tr><br>
+    </tr>
 
     <tr>
         <td>Days</td><td> <?php print "$days"; ?> </td>
-    </tr><br>
+    </tr>
 
     <tr>
         <td>Time</td><td> <?php print "$time"; ?> </td>
-    </tr><br>
+    </tr>
     <tr>
         <td>Credit Hours</td> <td> <?php print "$creditHours"; ?> </td>
-    </tr><br>
+    </tr>
 
     <tr>
         <td>Instructor</td> <td> <?php print "$instructor"; ?> </td>
-    </tr><br>
+    </tr>
 
     <tr>
         <td>Enrollment Cap</td> <td> <?php print "$enrollmentCap"; ?> </td>
-    </tr><br>
+    </tr>
 </table>
 
 </body>
