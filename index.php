@@ -12,11 +12,12 @@
 
 </head>
 <body>
-<header>
 	<?php include("header.php"); ?>
+<header>
 	<h1>Boring Course Registration System</h1>
 </header>
 <main>
+	<section>
 	<p>hi buddy. here are the links :3<p>
 	<ul>
 		<li><a href="register_for_course.php">register for course</a></li>
@@ -30,6 +31,7 @@
 		    <li><a href="add_course.php">add course</a></li>
         <?php } ?>
 	</ul>
+	</section>
 </main>
 
 

@@ -14,12 +14,11 @@
 
 </head>
 <body>
+	<?php include("header.php"); ?>
 	<header>
-		<?php include("header.php"); ?>
 		<h1>Add Boring Instructor</h1>
 	</header>
 	<main>
-		<p>hi buddy. here's where you add an instructor. fill out this info about the instructor and click submit to add them.<p>
 		<form>
 			<div class="two_column">
 				<label for="first_name">first name *</label>

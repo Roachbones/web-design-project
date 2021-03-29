@@ -14,8 +14,8 @@
 <?php include("login_check.php"); ?>
 
 <body>
+    <?php include("header.php"); ?>
     <header>
-        <?php include("header.php"); ?>
         <h1>Register for a Boring Course</h1>
     </header>
     <main>

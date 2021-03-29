@@ -14,8 +14,8 @@
 
 </head>
 <body>
+    <?php include("header.php"); ?>
     <header>
-	<?php include("header.php"); ?>
         <h1>Add a Boring Course</h1>
     </header>
     <main>
