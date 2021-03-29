@@ -16,11 +16,14 @@
 </header>
 <main>
 	<form action="login.php" method="post">
-    <?php if($_SESSION["login"] == "BAD LOGIN"){ echo "<p style=\"color:red;text-align:center;\">INVALID LOGIN: Please try again.</p>";} elseif($_SESSION["login"]=="SESSION TIMEOUT"){echo "<p>Session timed out, please login again.</p>"; }else{ echo "<p style=\"text-align: center;\">Please log in to use the system.</p>"; } ?>
-        <div class="three-column">
+        <p style="text-align:center">
+            <?php if($_SESSION["login"] == "BAD LOGIN"){ echo "INVALID LOGIN: Please try again.";} elseif($_SESSION["login"]=="SESSION TIMEOUT"){echo "Session timed out, please login again."; } else{ echo "Please log in to use the system."; } ?>
+        </p>
+        <div class="two_column">
             <label for="login">username</label>
             <input type="text" name="login" id="login" required>
         </div>
+        
         <input type="submit" value="login" id="submit">
     </form>
 </main>

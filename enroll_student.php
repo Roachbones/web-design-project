@@ -10,6 +10,7 @@
 <script src="form_validation.js"></script>
 <script src="display_form.js"></script>
 <?php session_start(); ?>
+<?php include("login_check.php"); ?>
 
 </head>
 <body>

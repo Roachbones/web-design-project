@@ -10,6 +10,7 @@
     if($username == "admin" || $username == "instructor" || $username == "student"){
         session_start();
         $_SESSION["login"]=$_POST["login"];
+        $_SESSION["last_seen"]=time();
         header("location:index.php");
     }
 

@@ -8,6 +8,7 @@
 <title>Boring Course Registration System</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <?php session_start(); ?>
+<?php include("login_check.php"); ?>
 
 </head>
 <body>
