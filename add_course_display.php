@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Display Add Course</title>
-<meta charset="utf-8">
-<style type="text/css">
-th, td, table{border: thin solid black;}
-</style>
+<meta charset="utf-8"/>
+<meta name="author" content="the cool web design group">
+<meta name="description" content="Boring course registration project for Dr. Williamson's Web Design & Programming class, spring 2021.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- mobile compatibility -->
+<title>Add Boring Course</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="form_validation.js"></script>
+<script src="display_form.js"></script>
+<?php session_start(); ?>
 
 </head>
 <body>
+    <header>
+	<?php include("header.php"); ?>
+        <h1>Add a Boring Course</h1>
+    </header>
 <?php
 
 //assign values of all form inputs to variables
@@ -40,40 +48,39 @@ if ($room = "")
     $name = "N/A";
 ?>
 <table>
-    <caption>Course to Add<caption>
     <tr>
-        <td>Course Year: </td><td> <?php print "$courseYear";?> </td>
+        <td>Course Year</td><td> <?php print "$courseYear";?> </td>
     </tr><br>
 
     <tr>
-        <td>Course: </td><td> <?php print "$course";?> </td>
+        <td>Course</td><td> <?php print "$course";?> </td>
     </tr><br>
 
     <tr>
-        <td>Course Name: </td><td> <?php print "$courseName";?> </td>
+        <td>Course Name</td><td> <?php print "$courseName";?> </td>
     </tr><br>
 
     <tr>
-        <td>Room: </td> <td> <?php print "$room"; ?> </td>
+        <td>Room</td> <td> <?php print "$room"; ?> </td>
     </tr><br>
 
     <tr>
-        <td>Days: </td><td> <?php print "$days"; ?> </td>
+        <td>Days</td><td> <?php print "$days"; ?> </td>
     </tr><br>
 
     <tr>
-        <td>Time: </td><td> <?php print "$time"; ?> </td>
+        <td>Time</td><td> <?php print "$time"; ?> </td>
     </tr><br>
     <tr>
-        <td>Credit Hours: </td> <td> <?php print "$creditHours"; ?> </td>
-    </tr><br>
-
-    <tr>
-        <td>Instructor: </td> <td> <?php print "$instructor"; ?> </td>
+        <td>Credit Hours</td> <td> <?php print "$creditHours"; ?> </td>
     </tr><br>
 
     <tr>
-        <td>Enrollment Cap: </td> <td> <?php print "$enrollmentCap"; ?> </td>
+        <td>Instructor</td> <td> <?php print "$instructor"; ?> </td>
+    </tr><br>
+
+    <tr>
+        <td>Enrollment Cap</td> <td> <?php print "$enrollmentCap"; ?> </td>
     </tr><br>
 </table>
 

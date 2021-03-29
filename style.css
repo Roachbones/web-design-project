@@ -14,7 +14,12 @@ main {
 	margin-right: auto;
 
 }
-form {
+table, tr, td {
+	border-collapse: collapse;
+	border: 1px solid black;
+	padding: .25em;
+}
+form, table {
 	background-color: LightGoldenRodYellow;
 	border: outset;
 	max-width: 30em;
