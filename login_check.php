@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    // determines if a user should be redirected due to their role or inactivity
+    // determining duration of inactivity
     $current_time=time();
     $last_seen_time=$_SESSION["last_seen"];
 
@@ -9,4 +10,10 @@
         $_SESSION["login"]="SESSION TIMEOUT";
         header("location:login_page.php");
     }
+
+    // determining if user is logged in
+    if(!isset($_SESSION["login"])){
+        header("location:login_page.php");
+    }
+
 ?>
