@@ -14,10 +14,10 @@
 
 </head>
 <body>
+	<?php include("header.php"); ?>
 	<header>
-		<?php include("header.php"); ?>
+		<h1>Add Boring Instructor</h1>
 	</header>
-	<h1>Add Boring Instructor</h1>
 	<main>
 		<form>
 			<div class="two_column">

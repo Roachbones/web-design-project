@@ -12,10 +12,10 @@
 
 </head>
 <body>
-<header>
 	<?php include("header.php"); ?>
+<header>
+	<h1>Boring Course Registration System</h1>
 </header>
-<h1>Boring Course Registration System</h1>
 <main>
 	<section>
 			<p>hi buddy. here are the links :3<p>
