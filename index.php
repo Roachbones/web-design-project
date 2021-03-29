@@ -14,17 +14,19 @@
 <body>
 <header>
 	<?php include("header.php"); ?>
-	<h1>Boring Course Registration System</h1>
 </header>
+<h1>Boring Course Registration System</h1>
 <main>
-	<p>hi buddy. here are the links :3<p>
-	<ul>
-		<li><a href="enroll_student.php">enroll student</a></li>
-		<li><a href="add_instructor.php">add instructor</a></li>
-		<li><a href="add_course.php">add course</a></li>
-		<li><a href="register_for_course.php">register for course</a></li>
-		<li><a href="drop_a_course.php">drop a course</a></li>
-	</ul>
+	<section>
+			<p>hi buddy. here are the links :3<p>
+		<ul>
+			<li><a href="enroll_student.php">enroll student</a></li>
+			<li><a href="add_instructor.php">add instructor</a></li>
+			<li><a href="add_course.php">add course</a></li>
+			<li><a href="register_for_course.php">register for course</a></li>
+			<li><a href="drop_a_course.php">drop a course</a></li>
+		</ul>
+	</section>
 </main>
 
 <footer>

@@ -15,9 +15,9 @@
 </head>
 <body>
     <header>
-	<?php include("header.php"); ?>
-        <h1>Add a Boring Course</h1>
+        <?php include("header.php"); ?>
     </header>
+    <h1>Add a Boring Course</h1>
     <main>
         <form action = "add_course_display.php" method="post">
             <div class="two_column">

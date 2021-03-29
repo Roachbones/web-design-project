@@ -16,10 +16,9 @@
 <body>
 	<header>
 		<?php include("header.php"); ?>
-		<h1>Boring Student Enrollment</h1>
 	</header>
+	<h1>Boring Student Enrollment</h1>
 	<main>
-		<p>hi buddy. trying to enroll somebody here? big mistake. i bet they can't handle this college. fill out this enrollment form, <b><i>if you dare................</i></b> &gt;:3<p>
 		<form>
 			<div class="two_column">
 				<label for="first_name">first name *</label>

@@ -2,11 +2,19 @@
 /* alternative to Comic Sans for non-windows systems */
 body {
 	font-family: sans;
-	background-color: Thistle;
+	background-color: thistle;
 }
-nav{
-	background-color: plum;
-	padding:.25em;
+body > * {
+	max-width: 69em;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: lightgoldenrodyellow;
+	border: outset;
+	padding:.5em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: .5em;
+	margin-bottom: .5em;
 }
 h1, h2, h3, h4, h5, h6 {
 	text-align: center;
@@ -16,20 +24,11 @@ main {
 	max-width: 69em;
 	margin-left: auto;
 	margin-right: auto;
-
 }
 table, tr, td {
 	border-collapse: collapse;
 	border: 1px solid black;
 	padding: .25em;
-}
-form, table {
-	background-color: LightGoldenRodYellow;
-	border: outset;
-	max-width: 30em;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 1em;
 }
 .hidden {
 	display:none;
@@ -48,12 +47,6 @@ p.memo{
 	text-align: center;
 	font-size: .7em;
 }
-section, footer {
-	margin-top: 1em;
+footer {
 	text-align: center;
-	background-color: MistyRose;
-	border: outset;
-	max-width: 40em;
-	margin-left: auto;
-	margin-right: auto;
 }
