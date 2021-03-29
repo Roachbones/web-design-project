@@ -50,9 +50,7 @@
             <p class="memo">* indicates a required field</p>
         </form>
     </main>
-    <footer>
-        <p>this website was <a href="https://github.com/Roachbones/web-design-project">constructed</a> by the cool web design group: vivian, spence, kade, and tony</p>
-    </footer>
+    <?php include("footer.php"); ?>
     <script src="event_registration.js"></script>
 </body>
 </html>
