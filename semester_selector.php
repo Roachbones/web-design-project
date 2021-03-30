@@ -17,7 +17,8 @@
 	<h1>Boring Course Registration System</h1>
 </header>
 <main>
-<p>select a course to view</p>
+	<?php if($_SESSION["login"] == "admin") { ?>
+	<p>select a course to view</p>
 	<form action="view_semester_students_admin.php" method="post">
 		<select name="selected_semester">
 			<option value="SP 2021">SP 2021</option>
@@ -27,6 +28,10 @@
 		</select>
 		<input type="submit" value="select" id="submit">
 	</form>
+	<?php } else{
+		http_response_code(403);
+		include("begone.php");
+	} ?>
 </main>
 
 

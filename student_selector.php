@@ -17,6 +17,7 @@
 	<h1>Boring Course Registration System</h1>
 </header>
 <main>
+	<?php if($_SESSION["login"] == "admin") { ?>
 	<p>select a student to view the courses they are registered for.</p>
 	<form action="view_registered_courses_student.php" method="post">
 		<select name="selected_student">
@@ -27,6 +28,10 @@
 		</select>
 		<input type="submit" value="select" id="submit">
 	</form>
+	<?php } else {
+		http_response_code(403);
+		include("begone.php");
+	} ?>
 </main>
 
 
