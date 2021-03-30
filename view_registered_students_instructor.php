@@ -25,10 +25,17 @@
 	<h1>Boring Course Registration System</h1>
 </header>
 <main>
-<p>Displaying the students of <?php echo "$name"; ?>.</p> <!-- eventually use this session variable to know who to query info for -->
+<?php 
+$username=$_SESSION["login"];
+if($username == "instructor" || $username == "admin") { ?>
+	<p>Displaying the students of <?php echo "$name"; ?>.</p> <!-- eventually use this session variable to know who to query info for -->
 	<table>
 		<tr><th>Name</th><th>Year</th><th>Major</th><th>Email</th>
 	</table>
+	<?php } else {
+		http_response_code(403);
+		include("begone.php");
+	} ?>
 </main>
 
 

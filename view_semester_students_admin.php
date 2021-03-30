@@ -17,10 +17,15 @@
 	<h1>Boring Course Registration System</h1>
 </header>
 <main>
+<?php if($_SESSION["login"] == "admin") { ?>
 	<p>Displaying students registered for <?php echo $_POST["selected_semester"]; ?>.</p>
 	<table>
 		<tr><th>Name</th><th>Year</th><th>Major</th><th>Email</th>
 	</table>
+	<?php } else {
+		http_response_code(403);
+		include("begone.php");
+	} ?>
 </main>
 
 
