@@ -18,7 +18,7 @@
 </header>
 <main>
 	<p>select a student to view the courses they are registered for.</p>
-	<form action="view_registered_courses_students.php" method="post">
+	<form action="view_registered_courses_student.php" method="post">
 		<select name="selected_instructor">
 			<option value="vivian">vivian</option>
 			<option value="spence">spence</option>
