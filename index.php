@@ -52,10 +52,10 @@
 				<?php
 				}
 				if($username == "admin"){ ?>
-					<li><a href="select_student_to_view_courses.php">view a student's courses</a></li>
-					<li><a href="select_course_to_view_students.php">view a course's students</a></li>
-					<li><a href="select_instructor_to_view_courses.php">view an instructor's courses</a></li>
-					<li><a href="select_semester_to_view_students.php">view students registered by semester</a></li>
+					<li><a href="student_selector.php">view a student's courses</a></li>
+					<li><a href="course_selector.php">view a course's students</a></li>
+					<li><a href="instructor_selector.php">view an instructor's courses</a></li>
+					<li><a href="semester_selector.php">view students registered by semester</a></li>
 				<?php
 				} ?>
 			</ul>
