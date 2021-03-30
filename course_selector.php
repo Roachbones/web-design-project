@@ -19,10 +19,10 @@
 <main>
 	<p>select a course to view the students of.</p>
 	<form action="view_registered_students_instructor.php" method="post">
-		<select name="course selector">
-			<option value="MATH252">MATH 252</option>
-			<option value="CSCI330">CSCI 330</option>
-			<option value="ECON211">ECON 211</option>
+		<select name="selected_course">
+			<option value="MATH 252">MATH 252</option>
+			<option value="CSCI 330">CSCI 330</option>
+			<option value="ECON 211">ECON 211</option>
 		</select>
 		<input type="submit" value="select" id="submit">
 	</form>

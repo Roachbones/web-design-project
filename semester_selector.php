@@ -19,11 +19,11 @@
 <main>
 <p>select a course to view</p>
 	<form action="view_semester_students_admin.php" method="post">
-		<select name="course selector">
-			<option value="SP2021">SP2021</option>
-			<option value="FL2021">FL2021</option>
-			<option value="SP2022">SP2022</option>
-			<option value="FL2022">FL2022</option>
+		<select name="selected_semester">
+			<option value="SP 2021">SP 2021</option>
+			<option value="FL 2021">FL 2021</option>
+			<option value="SP 2022">SP 2022</option>
+			<option value="FL 2022">FL 2022</option>
 		</select>
 		<input type="submit" value="select" id="submit">
 	</form>

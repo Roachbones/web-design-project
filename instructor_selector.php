@@ -20,9 +20,9 @@
 	<p>select an instructor who's courses you'd like to view.</p>
 	<form action="view_taught_courses_instructor.php" method="post">
 		<select name="selected_instructor">
-			<option value="rmv001">Bob Van Camp</option>
-			<option value="williamm">Matthew Williamson</option>
-			<option value="row004">Roy Walters</option>
+			<option value="Bob Van Camp">Bob Van Camp</option>
+			<option value="Matthew Williamson">Matthew Williamson</option>
+			<option value="Roy Walters">Roy Walters</option>
 		</select>
 		<input type="submit" value="select" id="submit">
 	</form>

@@ -9,6 +9,14 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <?php session_start(); ?>
 <?php include("login_check.php"); ?>
+<?php
+	if($_SESSION["login"]=="admin"){
+		$name=$_POST["selected_course"];
+	}
+	else{
+		$name=$_SESSION["login"];
+	}
+?>
 
 </head>
 <body>
@@ -17,7 +25,7 @@
 	<h1>Boring Course Registration System</h1>
 </header>
 <main>
-<p>Displaying the students of <?php $_POST["selected_instructor"] ?>.</p> <!-- eventually use this session variable to know who to query info for -->
+<p>Displaying the students of <?php echo "$name"; ?>.</p> <!-- eventually use this session variable to know who to query info for -->
 	<table>
 		<tr><th>Name</th><th>Year</th><th>Major</th><th>Email</th>
 	</table>
