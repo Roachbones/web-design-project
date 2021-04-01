@@ -5,7 +5,7 @@
 <meta name="author" content="the cool web design group">
 <meta name="description" content="Boring course registration project for Dr. Williamson's Web Design & Programming class, spring 2021.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- mobile compatibility -->
-<title>Add Boring Course</title>
+<title>Add Course Confirmation</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="form_validation.js"></script>
 <script src="display_form.js"></script>
@@ -17,7 +17,7 @@
     <header>
         <?php include("header.php"); ?>
     </header>
-    <h1>Add a Boring Course</h1>
+    <h1>Add Course Confirmation</h1>
 <?php
 
 //assign values of all form inputs to variables
@@ -43,9 +43,9 @@ $instructor = $instructorFirstName." ".$instructorLastName;
 $enrollmentCap = $_POST["enrollment_cap"];
 
 //check if the non required fields exist or not
-if ($courseName = "")
+if (!isset($courseName))
     $courseName = "N/A";
-if ($room = "")
+if (!isset($name))
     $name = "N/A";
 ?>
 <h3>The following course will be added</h3>
