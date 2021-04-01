@@ -20,7 +20,7 @@
 	<main>
 	    
         <?php if($_SESSION["login"] == "admin" or $_SESSION["login"] == "student") { ?>
-		    <form>
+		    <form action="enroll_student_confirmation.php" method="post">
 			    <div class="two_column">
 				    <label for="first_name">first name *</label>
 				    <input type="text" name="first_name" id="first_name" required>

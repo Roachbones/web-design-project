@@ -20,7 +20,7 @@
     <main>
     
         <?php if($_SESSION["login"] == "admin" or $_SESSION["login"] == "student") { ?>
-            <form>
+            <form action="drop_a_course_confirmation.php" method="post">
                 <div class="two_column">
                     <label for="first_name">first name *</label>
                     <input type="text" id="first_name" name="first_name" required>
