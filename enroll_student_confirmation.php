@@ -15,11 +15,19 @@
 <body>
     <header>
         <?php include("header.php"); ?>
+    <?php if($_SESSION["login"] == "admin"){ ?>
     </header>
     <h1>Enroll Student Confirmation</h1>   
     <h3>The following student will be enrolled</h3>
-<table>
-    <?php include("confirmation_loop.php");?>
-</table>
+    <table>
+        <?php include("confirmation_loop.php");?>
+    </table>
+    <?php } else {
+        http_response_code(403);
+        include("begone.php");
+    } ?>
+    <footer>
+        <?php include("footer.php"); ?>
+    </footer>
 </body>
 </html>

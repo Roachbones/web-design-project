@@ -16,10 +16,18 @@
     <header>
         <?php include("header.php"); ?>
     </header>
+    <?php if($_SESSION["login"]=="admin"){ ?>
     <h1>Add Instructor Confirmation</h1>   
-<h3>The following instructor will be added</h3>
-<table>
-    <?php include("confirmation_loop.php");?>
-</table>
+    <h3>The following instructor will be added</h3>
+    <table>
+        <?php include("confirmation_loop.php");?>
+    </table>
+    <?php } else {
+        http_response_code(403);
+        include("begone.php");
+    } ?>
+    <footer>
+        <?php include("footer.php"); ?>
+    </footer>
 </body>
 </html>

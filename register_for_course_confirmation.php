@@ -16,10 +16,20 @@
     <header>
         <?php include("header.php"); ?>
     </header>
+    <?php 
+    $username=$_SESSION["login"];
+    if($username == "student" || $username == "admin"){ ?>
     <h1>Register Course Confirmation</h1>   
     <h3>The following course will be registered for student</h3>
-<table>
-    <?php include("confirmation_loop.php");?>
-</table>
+    <table>
+        <?php include("confirmation_loop.php");?>
+    </table>
+    <?php } else {
+        http_response_code(403);
+        include("begone.php");
+    } ?>
+    <footer>
+        <?php include("footer.php"); ?>
+    </footer>
 </body>
 </html>
