@@ -17,7 +17,7 @@
         <?php include("header.php"); ?>
     </header>
     <h1>Register Course Confirmation</h1>   
-    <h3>The following student will be registered for course</h3>
+    <h3>The following course will be registered for student</h3>
 <table>
     <?php include("confirmation_loop.php");?>
 </table>
