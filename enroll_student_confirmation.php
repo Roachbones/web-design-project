@@ -17,7 +17,7 @@
         <?php include("header.php"); ?>
     </header>
     <h1>Enroll Student Confirmation</h1>   
-<h3> <? echo"$_POST["first_name"].' '.$_POST["last_name"]"; ?> will be enrolled</h3>"
+<h3> <? echo "$_POST['first_name'].' '.$_POST['last_name']"; ?> will be enrolled</h3>"
 <table>
     <?php include("confirmation_loop.php");?>
 </table>
