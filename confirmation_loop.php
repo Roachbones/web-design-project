@@ -18,7 +18,9 @@ if(isset($arr["days"])){
 }       
 
 foreach ($arr as $key => $value){
-        
+        if(!isset($arr[$key]))
+                $arr[$key] = "N/A";
+        str_replace("_", " ", $key);
         echo "<tr><td>$key</td>";
         echo "<td>$value</td></tr>";
 }
