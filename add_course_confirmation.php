@@ -29,7 +29,7 @@
         include("begone.php");
     } ?>
     <footer>
-        <?php include("begone.php"); ?>
+        <?php include("footer.php"); ?>
     </footer>
 </body>
 </html>
