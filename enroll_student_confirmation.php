@@ -19,9 +19,12 @@
     </header>
     <h1>Enroll Student Confirmation</h1>   
     <h3>The following student will be enrolled</h3>
-    <table>
-        <?php include("confirmation_loop.php");?>
-    </table>
+    <form action="insert.php">
+        <table>
+            <?php include("confirmation_loop.php");?>
+        </table>
+        <input type="submit" value="submit!" id="submit">
+    </form>
     <?php } else {
         http_response_code(403);
         include("begone.php");

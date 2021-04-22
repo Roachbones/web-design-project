@@ -21,7 +21,7 @@
     if($username == "student" || $username == "admin"){ ?>
     <h1>Register Course Confirmation</h1>   
     <h3>The following course will be registered for student</h3>
-    <form action="insert.php" method="post">
+    <form action="insert.php">
         <table>
             <?php include("confirmation_loop.php");?>
         </table>

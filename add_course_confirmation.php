@@ -21,9 +21,12 @@
     if($username=="admin" || $username=="instructor"){ ?>
     <h1>Add Course Confirmation</h1>   
     <h3>The following course will be added</h3>
-    <table>
-        <?php include("confirmation_loop.php");?>
-    </table>
+    <form action="insert.php">
+        <table>
+            <?php include("confirmation_loop.php");?>
+        </table>
+        <input type="submit">
+    </form>
     <?php } else {
         http_response_code(403);
         include("begone.php");

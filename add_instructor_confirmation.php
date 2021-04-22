@@ -19,9 +19,12 @@
     <?php if($_SESSION["login"]=="admin"){ ?>
     <h1>Add Instructor Confirmation</h1>   
     <h3>The following instructor will be added</h3>
-    <table>
-        <?php include("confirmation_loop.php");?>
-    </table>
+    <form action="insert.php">
+        <table>
+            <?php include("confirmation_loop.php");?>
+        </table>
+        <input type="submit" value="submit!" id="submit">
+    </form>
     <?php } else {
         http_response_code(403);
         include("begone.php");

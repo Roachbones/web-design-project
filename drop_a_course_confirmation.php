@@ -21,9 +21,12 @@
     if($username == "admin" || $username == "student"){ ?>
     <h1>Drop Course Confirmation</h1>   
     <h3>The following course will be dropped</h3>
-    <table>
-        <?php include("confirmation_loop.php");?>
-    </table>
+        <form action="insert.php">
+            <table>
+                <?php include("confirmation_loop.php");?>
+            </table>
+            <input type="submit" value="submit!" id="submit">
+        </form>
     <?php } else {
         http_response_code(403);
         include("begone.php");
