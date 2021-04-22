@@ -15,7 +15,8 @@ if(isset($arr["days"])){
                 unset($arr["time2"]);
         }
 }       
-
+$_SESSION["arr"] = $arr;
+$_SESSION["arr"]["url"] = $_SERVER['HTTP_REFERER'];
 foreach ($arr as $key => $value){
         $key=str_replace("_", " ", $key);
         $key=preg_replace("/\d/", "", $key);
