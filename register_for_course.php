@@ -41,10 +41,10 @@
                     <input type="text" id="course_prefix" name="course_prefix" required>
                     
                     <label for="course_number">course number *</label>
-                    <input type="text" id="course_number" name="course_numer" required>
+                    <input type="text" id="course_number" name="course_number" required>
                     
                     <label for="course_section">course section *</label>
-                    <input type="text" id="course_section" name="course_number" required>
+                    <input type="text" id="course_section" name="course_section" required>
                 </div>
                 <p class="memo">* indicates a required field</p>
 			    <input type="submit" value="submit!" id="submit">

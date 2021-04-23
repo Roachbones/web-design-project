@@ -12,10 +12,120 @@
     <h1>ayy</h1>
 <table>
 <?php
-// $arr = $_POST;
+    //prints contents of arr array for troubleshooting
     var_dump($_SESSION["arr"]);
+    //creates these so their default is null. This will handle optional fields because it will add them whether there is a value or not
+    // having these all in variables will make it way easier to deal with the database. All these if statments just put the values from the form into variables.
+
+    $url;
+    $fname;
+    $lname;
+    $semester;
+    $year;
+    $prefix;
+    $number;
+    $section;
+    $name; //optional
+    $room; //optional
+    $days;
+    $hours; //optional
+    $ifname; //optional
+    $ilname; //optional
+    $cap; //optional
+    //$major; //optional
+    $email;
+
+    //these if statements assign the variables to their values from the form. It doesn't matter which form because it checks all possible field names
+    if(isset($_SESSION["arr"]["url"])){
     //MUST begin with http://localhost:4000/
-    $url = $_SESSION["arr"]["url"];
+    //this may cause problems depending on how it's hosted so in the future trim using / as delimiter
+        $url = $_SESSION["arr"]["url"];
+    }
+    if(isset($_SESSION["arr"]["first_name"])){
+        $fname = $_SESSION["arr"]["first_name"];
+    }
+    if(isset($_SESSION["arr"]["last_name"])){
+        $lname = $_SESSION["arr"]["last_name"];
+    }
+    if(isset($_SESSION["arr"]["semester"])){
+        $semester = $_SESSION["arr"]["semester"];
+    }
+    if(isset($_SESSION["arr"]["course_year"]))
+    {
+        $year = $_SESSION["arr"]["course_year"];
+    }
+    if(isset($_SESSION["arr"]["course_prefix"]))
+    {
+        $prefix = $_SESSION["arr"]["course_prefix"];
+    }
+    if(isset($_SESSION["arr"]["course_number"]))
+    {
+        $number = $_SESSION["arr"]["course_number"]; 
+    }
+    if(isset($_SESSION["arr"]["course_section"]))
+    {
+        $section = $_SESSION["arr"]["course_section"];
+    }
+    if(isset($_SESSION["arr"]["course_name"])){
+        $name = $_SESSION["arr"]["course_name"]; //optional
+    }
+    if(isset($_SESSION["arr"]["room"])){
+        $room = $_SESSION["arr"]["room"]; //optional
+    }
+    if(isset($_SESSION["arr"]["days"])){
+        $days = $_SESSION["arr"]["days"];
+    }
+    if(isset($_SESSION["arr"]["time1"])){
+        $time1 = $_SESSION["arr"]["time1"];
+    }
+    if(isset($_SESSION["arr"]["credit_hours"])){
+        $hours = $_SESSION["arr"]["credit_hours"];
+    }
+    if(isset($_SESSION["arr"]["instructor_first_name"])){
+        $ifname = $_SESSION["arr"]["instructor_first_name"];
+    }
+    if(isset($_SESSION["arr"]["instructor_last_name"])){
+        $ilname = $_SESSION["arr"]["instructor_last_name"];
+    }
+    if(isset($_SESSION["arr"]["enrollment_cap"])){
+        $cap = $_SESSION["arr"]["enrollment_cap"];
+    }
+    if(isset($_SESSION["arr"]["major"])){
+        $major = $_SESSION["arr"]["major"];
+    }
+    if(isset($_SESSION["arr"]["email"])){
+        $email = $_SESSION["arr"]["email"];
+    }
+    //did I forget any??
+
+    echo $email;
+    echo $major;
+
+
+////////////// here is database stuff that i havenr really figured out yet ///////////
+
+    $host = "localhost";
+    $dbUsername = "root";
+    $dbPassword = "";
+    $dbname = "330";
+
+    $connection = new mysqli($host, $dbUsername, $dbPassword, $dbname);
+
+    // if(mysqli_connect_error()){
+    //     die('Connect Error('.mysqli_connect_error().')'.mysqli_connect_error());
+    // }
+    // else{
+    //     $SELECT = "SELECT fmame, lname FROM 'register_for_course' where fname = ? limit 1";
+    //     $INSERT = "INSERT INTO reigister_for_course (fname, lname) values(?, ?)" ;
+
+    //     $stmt = $conn->prepare($SELECT);
+    //     $stmt->bind_param("s", $_);
+    //     $stmt->execute();
+    //     $stmt->bind_resul
+
+    // }
+
+    //this will be used to determin which table to add stuff to later
     if($url == "http://localhost:4000/register_for_course.php"){
         echo "came from $url";
     }
@@ -29,7 +139,7 @@
         echo "came from $url";
     }
     else if($url == "http://localhost:4000/add_instructor.php"){
-        echo "came from $url";
+        echo "";
     }
 ?></table>
 </body>
