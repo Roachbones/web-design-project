@@ -9,6 +9,7 @@
     <?php include("login_check.php"); ?>
 </head>
 <body>
+    <?php include("header.php"); ?>
     <h1>ayy</h1>
 <table>
 <?php
@@ -104,26 +105,49 @@
 
 ////////////// here is database stuff that i havenr really figured out yet ///////////
 
+
+    //connect to database
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
     $dbname = "330";
+    $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
 
-    $connection = new mysqli($host, $dbUsername, $dbPassword, $dbname);
+    //handle connection errors
+    if(mysqli_connect_error()){
+        die('Connect Error('.mysqli_connect_error().')'.mysqli_connect_error());
+    }
+    else{
+        echo "<br><br> connection successful<br>";
+        //insert stuff into table
 
-    // if(mysqli_connect_error()){
-    //     die('Connect Error('.mysqli_connect_error().')'.mysqli_connect_error());
-    // }
-    // else{
-    //     $SELECT = "SELECT fmame, lname FROM 'register_for_course' where fname = ? limit 1";
-    //     $INSERT = "INSERT INTO reigister_for_course (fname, lname) values(?, ?)" ;
+        echo $fname;
+        $sql = "INSERT INTO register_for_course (fname, lname, semester, year, prefix, number, section) VALUES ('$fname', '$lname', '$semester', '$year', '$prefix', '$number', '$section');";
+        mysqli_query($conn, $sql);
 
-    //     $stmt = $conn->prepare($SELECT);
-    //     $stmt->bind_param("s", $_);
-    //     $stmt->execute();
-    //     $stmt->bind_resul
 
-    // }
+        //print everything from the table to see if it worked
+        echo "<br>here is a select * form the register_for_course table<br>";
+        $sql = "SELECT * FROM register_for_course;";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+
+        if($resultCheck > 0){
+            while ($row = mysqli_fetch_assoc($result)){
+                echo print_r($row) . "<br>";
+            }
+        }
+
+
+
+        // $SELECT = "SELECT fmame, lname FROM 'register_for_course' where fname = ? limit 1";
+        // $INSERT = "INSERT INTO reigister_for_course (fname, lname) values(?, ?)" ;
+
+        // $stmt = $conn->prepare($SELECT);
+        // $stmt->bind_param("s", $_);
+        // $stmt->execute();
+        // $stmt->bind_resul
+    }
 
     //this will be used to determin which table to add stuff to later
     if($url == "http://localhost:4000/register_for_course.php"){

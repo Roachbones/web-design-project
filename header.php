@@ -1,5 +1,7 @@
 <nav>
 <a href="index.php">🏚️ home</a>
+<!-- delet this before turning in, makes it easier to work on -->
+<a href="insert.php">insert.php</a>;
 <div style="float:right;">
     <?php
         $username=$_SESSION["login"];
