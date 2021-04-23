@@ -14,9 +14,9 @@
 <?php
     //prints contents of arr array for troubleshooting
     var_dump($_SESSION["arr"]);
+
     //creates these so their default is null. This will handle optional fields because it will add them whether there is a value or not
     // having these all in variables will make it way easier to deal with the database. All these if statments just put the values from the form into variables.
-
     $url;
     $fname;
     $lname;
