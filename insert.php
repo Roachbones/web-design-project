@@ -107,28 +107,67 @@
 
 
     //connect to database
+    //remote
+
+    // $host = "127.0.0.1";
+    // $dbUsername = "hrtt2713";
+    // $dbPassword = "hrtt2713";
+    // $dbname = "hrtt2713";
+    // $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
+
+    //local
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
     $dbname = "330";
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
 
+    //2, 3, 
+    //k300
+
     //handle connection errors
     if(mysqli_connect_error()){
         die('Connect Error('.mysqli_connect_error().')'.mysqli_connect_error());
     }
     else{
-        echo "<br><br> connection successful<br>";
+        echo "<br><br> connection successful, ";
         //insert stuff into table
+        //enroll studen inserts into student table
+        if($url == "http://localhost:4000/enroll_student.php"){
+            echo "came from $url";
+            $sql = "INSERT INTO student (fname, lname, year, major, email) VALUES ('$fname', '$lname', '$year','$major', '$email');";
+            mysqli_query($conn, $sql);
+        }
+        
+        //add instructor inserts into instructor table
+        else if($url == "http://localhost:4000/add_instructor.php"){
+            echo "came from $url";
+        }
 
-        echo $fname;
-        $sql = "INSERT INTO register_for_course (fname, lname, semester, year, prefix, number, section) VALUES ('$fname', '$lname', '$semester', '$year', '$prefix', '$number', '$section');";
-        mysqli_query($conn, $sql);
+        //add course inserts into course table
+        else if($url == "http://localhost:4000/add_course.php"){
+            echo "came from $url";
+            $sql = "INSERT INTO course (semester, year, prefix, number, section, name, room, days, hours, fname, lname, cap) VALUES ('$semester', '$year', '$prefix', '$number', '$section', '$name', '$room', '$days', '$hours', '$fname', '$lname', '$cap');";
+            mysqli_query($conn, $sql);
+        }
+        //register for course inserts into registration table and relates the fk studentID and fk courseID to the pk regID
+        if($url == "http://localhost:4000/register_for_course.php"){
+            echo "came from $url";
+            $sql = "INSERT INTO reg (studentID, courseID) SELECT student.id, course.id FROM student, course where student.fname = $fname and student.lname = $lname and course.year = $year and course.prefix = $prefix and course.number = $number and course.section = $section);";
+            mysqli_query($conn, $sql);
+        }
 
+
+        //drop course 
+        if($url == "http://localhost:4000/drop_a_course.php"){
+            echo "came from $url";
+            
+        }
+        //
 
         //print everything from the table to see if it worked
-        echo "<br>here is a select * form the register_for_course table<br>";
-        $sql = "SELECT * FROM register_for_course;";
+        echo "<br>here is a select * form the student table<br>";
+        $sql = "SELECT * FROM registration;";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
 
@@ -147,23 +186,6 @@
         // $stmt->bind_param("s", $_);
         // $stmt->execute();
         // $stmt->bind_resul
-    }
-
-    //this will be used to determin which table to add stuff to later
-    if($url == "http://localhost:4000/register_for_course.php"){
-        echo "came from $url";
-    }
-    else if($url == "http://localhost:4000/drop_a_course.php"){
-        echo "came from $url";
-    }
-    else if($url == "http://localhost:4000/add_course.php"){
-        echo "came from $url";
-    }
-    else if($url == "http://localhost:4000/enroll_student.php"){
-        echo "came from $url";
-    }
-    else if($url == "http://localhost:4000/add_instructor.php"){
-        echo "";
     }
 ?></table>
 </body>
