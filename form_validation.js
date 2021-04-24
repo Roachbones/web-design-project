@@ -118,7 +118,7 @@ function enrollment_cap_check(){
     var el=document.getElementById("enrollment_cap");
     
     if(el.value.search(/^[0-9]?[0-9]$/)==-1){
-        alert("Enrollment cap must be a number between 01-99");
+        alert("Enrollment cap must be a number between 1-99");
         el.value="";
     }
 }
