@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>insert.php</title>
-    <?php session_start(); ?>
-    <?php include("login_check.php"); ?>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <?php 
+    session_start();
+    include("login_check.php");
+    include("header.php");
+     ?>
+    <?php  ?>
 </head>
 <body>
-    <?php include("header.php"); ?>
+    <?php  ?>
     <h1>ayy</h1>
-<table>
 <?php
     //prints contents of arr array for troubleshooting
     var_dump($_SESSION["arr"]);
@@ -166,18 +170,60 @@
         }
         //
 
-        //print everything from the table to see if it worked
-        echo "<br>here is a select * form the student table<br>";
-        $sql = "SELECT * FROM registration;";
-        $result = mysqli_query($conn, $sql);
-        $resultCheck = mysqli_num_rows($result);
-
-        if($resultCheck > 0){
-            while ($row = mysqli_fetch_assoc($result)){
-                echo print_r($row) . "<br>";
+        //prints results of sql query in a html table
+        function printQueryAsTable($theSQL){
+            //access $conn within the function
+            global $conn;
+            //result of query stored in $result array
+            $result = mysqli_query($conn, $theSQL);
+            //checks if anything was selected
+            $resultCheck = mysqli_num_rows($result);
+            //only print table if query has results
+            if($resultCheck > 0){
+                //table start tag, table row start tag for headings
+                echo "<table><tr>";
+                //first row is fetched for the headings, so the values must be stored so they aren't skipped when the table data is printed
+                $firstRow=array();
+                //create table headings
+                foreach(mysqli_fetch_assoc($result) as $key => $value){
+                    //each field name is a table heading
+                    echo "<th>$key</th>";
+                    //store first row values
+                    array_push($firstRow, $value);
+                }
+                //table row end tag for headings
+                echo "</tr><tr>";
+                //print first row
+                foreach ($firstRow as $key => $value){
+                    echo "<td>$value</td>";  
+                }
+                echo "</tr>";
+                //loop through each row of db table
+                while($row = mysqli_fetch_assoc($result)){
+                    echo "<tr>";
+                    foreach ($row as $key => $value){
+                        //print each value from a given row
+                        echo "<td>$value</td>";  
+                    }
+                    echo "</tr>";
+                }
+                //end table tag
+                echo "</table>";
+                }
             }
         }
 
+        echo "<br>here is a select * form the student course<br>";
+        $sql = "SELECT * FROM course;";
+        printQueryAsTable($sql);
+
+// echo "<table>"; // start a table tag in the HTML
+
+// while($row = mysql_fetch_array($result)){   //Creates a loop to loop through results
+// echo "<tr><td>" . $row['name'] . "</td><td>" . $row['age'] . "</td></tr>";  //$row['index'] the index here is a field name
+// }
+
+// echo "</table>";
 
 
         // $SELECT = "SELECT fmame, lname FROM 'register_for_course' where fname = ? limit 1";
@@ -187,7 +233,8 @@
         // $stmt->bind_param("s", $_);
         // $stmt->execute();
         // $stmt->bind_resul
-    }
-?></table>
+    // }
+    mysqli_close($conn);
+?>
 </body>
 </html>

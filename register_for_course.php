@@ -49,6 +49,8 @@
                 <p class="memo">* indicates a required field</p>
 			    <input type="submit" value="submit!" id="submit">
             </form>
+        <h4 class="center">List of Registered Students</h4>
+            <!-- set $_POST to an array that contains the entries retreived by a SELECT * from the student table so that confirmation loop may be used in order to display this table neatly, or just take the code from confirmation loop and apply to $arr -->
         <?php 
         } else { 
             http_response_code(403);
