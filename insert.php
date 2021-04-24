@@ -13,15 +13,17 @@
      ?>
     <?php  ?>
 </head>
+<!-- This is currentl an html page to make it easy to work on, but it will be just php later and its functions will be called on other pages -->
 <body>
     <?php  ?>
-    <h1>ayy</h1>
+    <!-- <h1>ayy</h1> -->
 <?php
     //prints contents of arr array for troubleshooting
-    var_dump($_SESSION["arr"]);
+    // var_dump($_SESSION["arr"]);
 
     //creates these so their default is null. This will handle optional fields because it will add them whether there is a value or not
     // having these all in variables will make it way easier to deal with the database. All these if statments just put the values from the form into variables.
+    $test = "cock";
     $url;
     $fname;
     $lname;
@@ -103,10 +105,6 @@
     }
     //did I forget any??
 
-    echo $email;
-    echo $major;
-
-
 ////////////// here is database stuff that i havenr really figured out yet ///////////
 
 
@@ -172,6 +170,7 @@
 
         //prints results of sql query in a html table
         function printQueryAsTable($theSQL){
+            global $conn;
             //access $conn within the function
             global $conn;
             //result of query stored in $result array
@@ -185,22 +184,26 @@
                 //first row is fetched for the headings, so the values must be stored so they aren't skipped when the table data is printed
                 $firstRow=array();
                 //create table headings
+                //empty col for checkboxes
+                echo "<th></th>";
                 foreach(mysqli_fetch_assoc($result) as $key => $value){
                     //each field name is a table heading
                     echo "<th>$key</th>";
                     //store first row values
                     array_push($firstRow, $value);
                 }
-                //table row end tag for headings
-                echo "</tr><tr>";
+                //table row end tag for headings, first radio button
+                //radio buttons value is the id of their row, which is retreived for identification, and they are grouped by their name which is the sql that generated whatever table they are in
+                echo "</tr><tr><td><input type='radio' value='" . $firstRow[count($firstRow)-1] ."' name='" . $theSQL ."'></td>";
                 //print first row
-                foreach ($firstRow as $key => $value){
+                foreach($firstRow as $key => $value){
                     echo "<td>$value</td>";  
                 }
                 echo "</tr>";
                 //loop through each row of db table
                 while($row = mysqli_fetch_assoc($result)){
-                    echo "<tr>";
+                    //create radio for form autofill and table row
+                    echo "<tr><td><input type='radio' value='". $row["id"]. "' name ='". $theSQL."'></td>";
                     foreach ($row as $key => $value){
                         //print each value from a given row
                         echo "<td>$value</td>";  
@@ -212,10 +215,9 @@
                 }
             }
         }
-
-        echo "<br>here is a select * form the student course<br>";
-        $sql = "SELECT * FROM course;";
-        printQueryAsTable($sql);
+        //this tests it
+        // echo "<br>here is a select * form the student course<br>";
+        
 
 // echo "<table>"; // start a table tag in the HTML
 
@@ -234,7 +236,7 @@
         // $stmt->execute();
         // $stmt->bind_resul
     // }
-    mysqli_close($conn);
+    // mysqli_close($conn);
 ?>
 </body>
 </html>

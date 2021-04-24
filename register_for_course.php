@@ -10,10 +10,13 @@
 <script src="form_validation.js"></script>
 </head>
 <?php session_start(); ?>
-<?php include("login_check.php"); ?>
+<?php 
+include("login_check.php");
+include("header.php");
+include("insert.php");
+?>
 
 <body>
-    <?php include("header.php"); ?>
     <header>
         <h1>Register for a Boring Course</h1>
     </header>
@@ -49,13 +52,29 @@
                 <p class="memo">* indicates a required field</p>
 			    <input type="submit" value="submit!" id="submit">
             </form>
-        <h4 class="center">List of Registered Students</h4>
+        
             <!-- set $_POST to an array that contains the entries retreived by a SELECT * from the student table so that confirmation loop may be used in order to display this table neatly, or just take the code from confirmation loop and apply to $arr -->
+            
         <?php 
+        echo "<h4 class='center'>List of Enrolled Students</h4>";
+        $sql = "SELECT * FROM student;";
+        printQueryAsTable($sql);
+        echo "<h4 class='center'>List of Courses</h4>";
+        $sql = "SELECT * FROM course;";
+        printQueryAsTable($sql);
+        echo "
+        <script type='text/javascript'>
+        alert('Working');
+        </script>
+        ";
+
+
+
         } else { 
             http_response_code(403);
             include("begone.php");
-        } ?>
+        }
+        ?>
     </main>
     <footer>
         <p>this website was <a href="https://github.com/Roachbones/web-design-project">constructed</a> by the cool web design group: vivian, spence, kade, and tony</p>
