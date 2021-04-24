@@ -33,7 +33,7 @@
     $ifname; //optional
     $ilname; //optional
     $cap; //optional
-    //$major; //optional
+    $major; //optional
     $email;
 
     //these if statements assign the variables to their values from the form. It doesn't matter which form because it checks all possible field names
@@ -155,13 +155,14 @@
             echo "came from $url";
             $sql = "INSERT INTO reg (studentID, courseID) SELECT student.id, course.id FROM student, course where student.fname = $fname and student.lname = $lname and course.year = $year and course.prefix = $prefix and course.number = $number and course.section = $section);";
             mysqli_query($conn, $sql);
+            //remember to add alerts for when a student or course doesnt exist or isnt already registered
         }
 
 
         //drop course 
         if($url == "http://localhost:4000/drop_a_course.php"){
             echo "came from $url";
-            
+
         }
         //
 

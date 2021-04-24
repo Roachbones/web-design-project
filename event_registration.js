@@ -10,10 +10,10 @@ if(document.getElementById("last_name")){
 	document.getElementById("last_name").onchange=last_name_check;
 }
 if(document.getElementById("instructor_first_name")){
-	document.getElementById("instructor_first_name").onchange=name_check;
+	document.getElementById("instructor_first_name").onchange=first_name_check;
 }
 if(document.getElementById("instructor_last_name")){
-	document.getElementById("instructor_last_name").onchange=name_check;
+	document.getElementById("instructor_last_name").onchange=last_name_check;
 }
 
 //email validation
@@ -60,6 +60,7 @@ if(document.getElementById("days")){
 }
 
 //form submission event
-if(document.getElementsByTagName("form")){
-	var form=document.getElementsByTagName("form")[0].onsubmit=display_form;
-}
+//display form no longer exists, exists in part 2
+// if(document.getElementsByTagName("form")){
+// 	var form=document.getElementsByTagName("form")[0].onsubmit=display_form;
+// }
